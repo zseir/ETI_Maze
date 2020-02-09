@@ -1,3 +1,4 @@
+
 # functions for the program
 
 import csv
@@ -24,13 +25,12 @@ def display_menu():
 # validate (option is in 0 to 4 range) and return it as int
 # else return -1 as invalid indicator
 def get_option():
-	option = input("Enter your option:")
-	if (option.isdigit() and 0 <= int(option) < 5):
-		option = int(option)
-	else:
-		option = -1
-	return option
-
+    option = input('Enter your option: ')
+    if (option.isdigit() and 0 <= int(option) < 5):
+        option = int(option)
+    else:
+        option = -1
+    return option
 
 
 # # Given a valid option (from get_option())
@@ -58,15 +58,6 @@ def get_option():
 #         print('Invalid option! Please try again!')
 
 #     return return_var, maze
-
-
-def option_function(option,maze):
-	if option == 4:
-		Display_config_menu()
-		config_options(maze)
-	else:
-		print("FAILURE")
-
 
 
 # [1] Read and load maze from file
@@ -116,11 +107,142 @@ def display_maze(maze):
 
 # [3] Play maze game
 
+# [3] Play maze game
+
+def startgame():
+    #display menu
+    print("Option[3] Play Maze Game")
+    print("=============================")
+    maze = read_file()
+    sc, ec = store_location(maze)
+    sc[0]-=1
+    sc[1]-=1
+    display_maze(maze)
+##    print(maze[sc[1]+1][sc[0]])
+    print("Location of Start(A) : (Column {}, Row {}) ".format(sc[0],sc[1]))
+    print ("Location of End(B): (Column {}, Row {}) ".format(ec[0],ec[1]-1))
+    while True:
+        i = input("Press 'W' for UP, 'A' for LEFT, 'S' for Down, 'D' for RIGHT, 'M' for Main Menu:")
+        maze,sc = move(i,sc,ec,maze)
+##        display_maze(maze)
+
+
+def move(i,sc,ec,maze):
+    #if user enter "W"
+    acoor = {"x":sc[0], "y":sc[1]}
+    if ( i == "w"):
+        newsc = [acoor["x"],acoor["y"]-1]
+
+        #check if move is valid ( maze[y,x] to navigate through maze
+        if(maze[newsc[1]][newsc[0]] == "O"):
+                #set current position to O
+                maze[acoor["y"]][acoor["x"]] = "O"
+                #set new position to A
+                maze[newsc[1]][newsc[0]] = "A"
+                display_maze(maze)
+                return maze, newsc
+        elif(maze[newsc[1]][newsc[0]] == "X"):
+                print("Invalid Move, Try Again")
+                maze[acoor["y"]][acoor["x"]] = "A"
+                maze[newsc[1]][newsc[0]] = "X"
+                newsc = [acoor["x"],acoor["y"]]
+                display_maze(maze)
+                return maze, newsc
+        elif(maze[newsc[1]][newsc[0]] == "B"):
+            print("Game Completed")
+            return maze, newsc
+
+
+    elif (i== "s"):
+        newsc = [acoor["x"],acoor["y"]+1]
+
+        #check if move is valid ( maze[y,x] to navigate through maze
+        if(maze[newsc[1]][newsc[0]] == "O"):
+                 #set current position to O
+                maze[acoor["y"]][acoor["x"]] = "O"
+                #set new position to A
+                maze[newsc[1]][newsc[0]] = "A"
+                display_maze(maze)
+                return maze, newsc
+
+        elif(maze[newsc[1]][newsc[0]] == "X"):
+                print("Invalid Move, Try Again")
+                maze[acoor["y"]][acoor["x"]] = "A"
+                maze[newsc[1]][newsc[0]] = "X"
+                newsc = [acoor["x"],acoor["y"]]
+                display_maze(maze)
+                return maze, newsc
+        elif(maze[newsc[1]][newsc[0]] == "B"):
+            print("Game Completed")
+            return maze, newsc
+
+
+    elif (i== "a"):
+        newsc = [acoor["x"]-1,acoor["y"]]
+
+        #check if move is valid ( maze[y,x] to navigate through maze
+        if(maze[newsc[1]][newsc[0]] == "O"):
+                #set current position to O
+                maze[acoor["y"]][acoor["x"]] = "O"
+                #set new position to A
+                maze[newsc[1]][newsc[0]] = "A"
+                display_maze(maze)
+                return maze, newsc
+##                return mazeleft
+
+        elif(maze[newsc[1]][newsc[0]] == "X"):
+                print("Invalid Move, Try Again")
+                maze[acoor["y"]][acoor["x"]] = "A"
+                maze[newsc[1]][newsc[0]] = "X"
+                newsc = [acoor["x"],acoor["y"]]
+                display_maze(maze)
+                return maze, newsc
+        elif(maze[newsc[1]][newsc[0]] == "B"):
+            print("Game Completed")
+            return maze, newsc
+
+
+    elif (i== "d"):
+        newsc = [acoor["x"]+1,acoor["y"]]
+        #check if move is valid ( maze[y,x] to navigate through maze
+        if(maze[newsc[1]][newsc[0]] == "O"):
+                #set current position to O
+                maze[acoor["y"]][acoor["x"]] = "O"
+                #set new position to A
+                maze[newsc[1]][newsc[0]] = "A"
+                display_maze(maze)
+                return maze, newsc
+
+        elif(maze[newsc[1]][newsc[0]] == "X"):
+                print("Invalid Move, Try Again")
+                maze[acoor["y"]][acoor["x"]] = "A"
+                maze[newsc[1]][newsc[0]] = "X"
+                newsc = [acoor["x"],acoor["y"]]
+                display_maze(maze)
+                return maze, newsc
+        elif(maze[newsc[1]][newsc[0]] == "B"):
+            print("Game Completed")
+            return maze, newsc
+
+    elif (i== "m"):
+        newsc = [acoor["x"],acoor["y"]]
+        display_menu()
+        return maze, newsc
+
+    elif (i!= "w","a","s","d","m"):
+        newsc = [acoor["x"],acoor["y"]]
+        print("Please enter a valid letter!")
+        display_maze(maze)
+        return maze, newsc
+
+    return maze, newsc
+
+
 # [4] Configure current maze
 #Display configuration menu with options
 config_menu= ["Create Wall", "Create Passageway", "Create Start Point", "Create End Point"]
 def Display_config_menu():
-	
+
 	print("CONFIGURATION MENU")
 	print("==================")
 	optionNo=1

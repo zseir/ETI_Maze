@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="LAPTOP-84643HL0" name="pytest" skipped="0" tests="10" time="0.226" timestamp="2020-02-08T17:26:50.730689"><testcase classname="test_playmaze" file="test_playmaze.py" line="17" name="test_A_moving_up" time="0.002"><system-out>[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="27" name="test_A_moving_down" time="0.002"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="38" name="test_A_moving_left" time="0.000"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="48" name="test_A_moving_right" time="0.002"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="58" name="test_A_not_moving_up_Q" time="0.000"><system-out>Please enter a valid letter!
+[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="68" name="test_hit_a_wall_W" time="0.002"></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="78" name="test_hit_a_wall_S" time="0.000"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="89" name="test_hit_a_wall_A" time="0.001"><system-out>Invalid Move, Try Again
+[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="99" name="test_hit_a_wall_D" time="0.001"><system-out>Invalid Move, Try Again
+[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="110" name="test_reach_b" time="0.003"><system-out>Game Completed
+</system-out></testcase></testsuite></testsuites>
